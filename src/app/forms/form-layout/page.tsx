@@ -12,8 +12,10 @@ export const metadata: Metadata = {
 };
 
 const FormLayout = () => {
+  const title = (metadata.title as string) || "Default Title";
+  const description = (metadata.description as string) || "Default Description";
   return (
-    <DefaultLayout>
+    <DefaultLayout title={title} description={description}>
       <Breadcrumb pageName="Form Layout" />
 
       <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">

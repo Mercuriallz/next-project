@@ -9,8 +9,10 @@ export const metadata: Metadata = {
 };
 
 const FormElementsPage = () => {
+  const title = (metadata.title as string) || "Default Title";
+  const description = (metadata.description as string) || "Default Description";
   return (
-    <DefaultLayout>
+    <DefaultLayout title={title} description={description}>
       <FormElements />
     </DefaultLayout>
   );

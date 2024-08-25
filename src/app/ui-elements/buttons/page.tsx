@@ -9,8 +9,11 @@ export const metadata: Metadata = {
 };
 
 const Buttons = () => {
+  const title = (metadata.title as string) || "Default Title";
+  const description = (metadata.description as string) || "Default Description";
+
   return (
-    <DefaultLayout>
+    <DefaultLayout title={title} description={description}>
       <Breadcrumb pageName="Buttons" />
 
       {/* <!-- Normal Button Items --> */}

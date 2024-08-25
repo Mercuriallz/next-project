@@ -9,8 +9,12 @@ export const metadata: Metadata = {
 };
 
 const Profile = () => {
+  const title = (metadata.title as string) || "Default Title";
+  const description = (metadata.description as string) || "Default Description";
+
+
   return (
-    <DefaultLayout>
+    <DefaultLayout title={title} description={description}>
       <div className="mx-auto w-full max-w-[970px]">
         <Breadcrumb pageName="Profile" />
 

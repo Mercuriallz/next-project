@@ -10,8 +10,10 @@ export const metadata: Metadata = {
 };
 
 const Settings = () => {
+  const title = (metadata.title as string) || "Default Title";
+  const description = (metadata.description as string) || "Default Description";
   return (
-    <DefaultLayout>
+    <DefaultLayout title={title} description={description}>
       <div className="mx-auto w-full max-w-[1080px]">
         <Breadcrumb pageName="Settings" />
 

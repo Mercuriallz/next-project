@@ -12,8 +12,11 @@ export const metadata: Metadata = {
 };
 
 const TablesPage = () => {
+  const title = (metadata.title as string) || "Default Title";
+  const description = (metadata.description as string) || "Default Description";
+
   return (
-    <DefaultLayout>
+    <DefaultLayout  title={title} description={description}>
       <Breadcrumb pageName="Tables" />
 
       <div className="flex flex-col gap-10">
